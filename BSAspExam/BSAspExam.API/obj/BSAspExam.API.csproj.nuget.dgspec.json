@@ -63,11 +63,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.11, )"
             },
-            "MySql.EntityFrameworkCore": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -149,11 +149,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.11, )"
             },
-            "MySql.EntityFrameworkCore": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.2, )"
             }
           },
           "imports": [
@@ -232,11 +232,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.11, )"
             },
-            "MySql.EntityFrameworkCore": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[6.0.7, )"
+              "version": "[6.0.2, )"
             }
           },
           "imports": [

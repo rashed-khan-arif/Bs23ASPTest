@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using System.Reflection.Emit;
 
 namespace BSAspExam.Repo.Core
 {
@@ -13,6 +14,7 @@ namespace BSAspExam.Repo.Core
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
             builder.ApplyConfigurationsFromAssembly(GetType().Assembly, type => type.Namespace?.Contains("Configs") ?? false);
         }
     }

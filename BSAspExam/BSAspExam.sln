@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSAspExam.API", "BSAspExam.API\BSAspExam.API.csproj", "{51C269A3-78CC-4EA3-B44A-F338DC938411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSAspExam.API", "BSAspExam.API\BSAspExam.API.csproj", "{51C269A3-78CC-4EA3-B44A-F338DC938411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSAspExam.Models", "BSAspExam.Models\BSAspExam.Models.csproj", "{DB7DC973-5EE6-49B9-8496-64B33A2C491E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSAspExam.Models", "BSAspExam.Models\BSAspExam.Models.csproj", "{DB7DC973-5EE6-49B9-8496-64B33A2C491E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSAspExam.Repo", "BSAspExam.Repo\BSAspExam.Repo.csproj", "{367ECA81-74FD-42E2-8C22-D57C95B8576D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSAspExam.Repo", "BSAspExam.Repo\BSAspExam.Repo.csproj", "{367ECA81-74FD-42E2-8C22-D57C95B8576D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

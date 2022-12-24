@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using System.Configuration;
 using System.Text;
 
 namespace BSAspExam.API.Core
@@ -15,9 +17,13 @@ namespace BSAspExam.API.Core
         {
             services.AddDbContext<AppDBContext>(options =>
             {
-                options.UseMySQL(configuration.GetConnectionString("Default"), (opt) =>
+                var connectionString = configuration.GetConnectionString("Default");
+
+                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 25)), (opt) =>
                  {
-                     opt.MigrationsAssembly(MigrationAssembly);
+                     opt
+                     .SchemaBehavior(MySqlSchemaBehavior.Translate, (string schemaName, string objectName) => schemaName + "_"+objectName.ToLower()).UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery).EnableRetryOnFailure(5)
+                     .MigrationsAssembly(MigrationAssembly);
                  });
             });
 
