@@ -10,3 +10,8 @@ C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\obj\Debug\net6.0\BSAspExam.Re
 C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\obj\Debug\net6.0\refint\BSAspExam.Repo.dll
 C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\obj\Debug\net6.0\BSAspExam.Repo.pdb
 C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\obj\Debug\net6.0\ref\BSAspExam.Repo.dll
+C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\bin\Debug\net6.0\BSAspExam.Repo.runtimeconfig.json
+C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\obj\Debug\net6.0\BSAspExam.Repo.genruntimeconfig.cache
+C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\bin\Debug\net6.0\BSAspExam.Models.dll
+C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\bin\Debug\net6.0\BSAspExam.Models.pdb
+C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Repo\obj\Debug\net6.0\BSAspExam.Repo.csproj.CopyComplete

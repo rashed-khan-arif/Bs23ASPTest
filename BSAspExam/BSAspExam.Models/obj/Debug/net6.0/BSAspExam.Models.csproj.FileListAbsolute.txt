@@ -10,3 +10,5 @@ C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Models\obj\Debug\net6.0\BSAspExam.
 C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Models\obj\Debug\net6.0\refint\BSAspExam.Models.dll
 C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Models\obj\Debug\net6.0\BSAspExam.Models.pdb
 C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Models\obj\Debug\net6.0\ref\BSAspExam.Models.dll
+C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Models\bin\Debug\net6.0\BSAspExam.Models.runtimeconfig.json
+C:\dev\dotnet\Bs23ASPTest\BSAspExam\BSAspExam.Models\obj\Debug\net6.0\BSAspExam.Models.genruntimeconfig.cache
