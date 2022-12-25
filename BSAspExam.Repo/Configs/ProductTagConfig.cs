@@ -11,7 +11,13 @@ namespace BSAspExam.Repo.Configs
             builder.HasKey(x => x.Id);
             builder.Property(x => x.ProductId); 
             builder.Property(x => x.TagId); 
-            builder.Property(x => x.Active);  
+            builder.Property(x => x.Active);
+
+
+            builder.HasOne(a => a.Product).WithMany(a => a.Tags).HasForeignKey(a => a.ProductId);
+            builder.HasOne(a => a.Tag).WithMany(a => a.ProductTags).HasForeignKey(a => a.TagId);
+
+
             builder.ToTable("ProductTags", "Prod");
         }
     } 

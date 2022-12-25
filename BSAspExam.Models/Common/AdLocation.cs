@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BSAspExam.Models.Domain;
+using BSAspExam.Models.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +20,10 @@ namespace BSAspExam.Models.Common
         public DateTime UpdateDate { get; set; }
         public bool Active { get; set; }
 
+        public virtual ApplicationUser CreatedByUser { get; set; }
         public virtual AdLocation Parent { get; set; }
+        public virtual ICollection<Advertisement> Advertisements { get; set; }
+        public virtual ICollection<AdLocation> Childs { get; set; }
     }
 
     public enum LocationType

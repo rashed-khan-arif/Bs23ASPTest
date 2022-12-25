@@ -27,7 +27,11 @@ namespace BSAspExam.Models.Domain
         public virtual ApplicationUser CreatedByUser { get; set; }
         public virtual Product Product { get; set; }
         public virtual AdLocation Location { get; set; }
+        public virtual AdContactInfo AdContactInfo { get; set; }
         public ICollection<AdImage> Images { get; set; }
+        public ICollection<AdMessage> Messages { get; set; }
+        public ICollection<AdTag> Tags { get; set; }
+        public virtual ICollection<UserBlacklist> UserBlacklists { get; set; }
     }
 
     public enum AdStatus

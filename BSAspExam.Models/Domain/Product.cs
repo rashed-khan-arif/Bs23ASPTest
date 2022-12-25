@@ -15,8 +15,10 @@ namespace BSAspExam.Models.Domain
         public bool Active { get; set; }
 
         public virtual ProductBrand Brand { get; set; }
+        public virtual Advertisement Advertisement { get; set; }
         public virtual ProductCategory Category { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
+        public virtual ICollection<ProductTag> Tags { get; set; }
 
     }
 }

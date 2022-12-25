@@ -11,5 +11,8 @@ namespace BSAspExam.Models.Domain
         public int CreatedBy { get; set; }
         public DateTime UpdateDate { get; set; }
         public bool Active { get; set; }
+
+        public virtual ICollection<AdImage> AdImages { get; set; }
+        public virtual ICollection<ProductImage> ProductImages { get; set; }
     }
 }

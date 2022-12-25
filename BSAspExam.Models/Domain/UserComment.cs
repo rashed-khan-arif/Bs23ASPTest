@@ -19,9 +19,10 @@ namespace BSAspExam.Models.Domain
         public DateTime UpdateDate { get; set; }
         public bool Active { get; set; }
 
-        public virtual ICollection<UserComment> UserComments { get; set; }
+        public virtual ICollection<UserComment> Childs { get; set; } 
         public virtual Advertisement Advertisement { get; set; }
         public virtual ApplicationUser CreatedByUser { get; set; }
+        public virtual UserComment Parent { get; set; }
 
     }
 }

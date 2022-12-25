@@ -10,5 +10,8 @@ namespace BSAspExam.Models.Domain
         public int CreatedBy { get; set; }
         public DateTime UpdateDate { get; set; }
         public bool Active { get; set; }
+
+        public virtual ICollection<AdTag> Tags { get; set; }
+        public virtual ICollection<ProductTag> ProductTags { get; set; }
     }
 }
