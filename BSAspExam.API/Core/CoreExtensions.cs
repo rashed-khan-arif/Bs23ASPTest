@@ -1,5 +1,7 @@
 ﻿using BSAspExam.Models.Identity;
 using BSAspExam.Repo.Core;
+using BSAspExam.Repo.Impl;
+using BSAspExam.Repo.UOW;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +14,7 @@ namespace BSAspExam.API.Core
 {
     public static class CoreExtensions
     {
-        const string MigrationAssembly = "BSAspExam.Repo";
+        const string MigrationAssembly = "BSAspExam.Repositories";
         public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AppDBContext>(options =>
@@ -31,11 +33,8 @@ namespace BSAspExam.API.Core
         }
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-
-            //services
-            //    .AddScoped(typeof(IStHubRepository<>), typeof(StHubRepository<>))
-            //    .AddScoped<IStudentService, StudentService>();
-
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>)); 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
         public static IServiceCollection AddAppIdentity(this IServiceCollection services, IConfiguration configuration)

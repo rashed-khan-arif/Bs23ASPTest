@@ -9,18 +9,16 @@ using System.Threading.Tasks;
 
 namespace BSAspExam.Repo.Configs
 {
-    public class ProductConfig : IEntityTypeConfiguration<Product>
+    public class ImageConfig : IEntityTypeConfiguration<Image>
     {
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<Image> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name);
-            builder.Property(x => x.CategoryId);
-            builder.Property(x => x.BrandId);
-            builder.Property(x => x.Description);
-            builder.Property(x => x.Active); 
+            builder.Property(x => x.Title);
+            builder.Property(x => x.Url); 
+            builder.Property(x => x.Active);
             builder.Property(x => x.CreateDate).HasDefaultValueSql("getdate()");
-            builder.ToTable("Products", "Prod");
+            builder.ToTable("Images", "dbo");
         }
     }
 }

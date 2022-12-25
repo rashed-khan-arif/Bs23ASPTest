@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BSAspExam.Models\BSAspExam.Models.csproj" />
-    <ProjectReference Include="..\BSAspExam.Repo\BSAspExam.Repo.csproj" />
+    <ProjectReference Include="..\BSAspExam.Repo\BSAspExam.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

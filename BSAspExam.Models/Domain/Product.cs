@@ -1,9 +1,4 @@
-﻿using BSAspExam.Models.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BSAspExam.Models.Common; 
 
 namespace BSAspExam.Models.Domain
 {
@@ -23,35 +18,5 @@ namespace BSAspExam.Models.Domain
         public virtual ProductCategory Category { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
 
-    }
-    public class ProductImage
-    {
-        public int Id { get; set; }
-        public int ProductId { get; set; }
-        public int ImageId { get; set; }
-        public bool Active { get; set; }
-
-
-        public virtual Product Product { get; set; }
-        public virtual Image Image { get; set; }
-    }
-
-    public class ProductCategory
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public bool Active { get; set; }
-
-        public ICollection<Product> Products { get; set; }
-    }
-
-    public class ProductBrand
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public bool Active { get; set; }
-        public ICollection<Product> Products { get; set; }
     }
 }

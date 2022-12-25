@@ -9,7 +9,7 @@ namespace BSAspExam.Models.Common
     public class AdLocation : IEntity
     {
         public int Id { get; set; }
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public LocationType Type { get; set; }
@@ -17,6 +17,8 @@ namespace BSAspExam.Models.Common
         public int CreatedBy { get; set; }
         public DateTime UpdateDate { get; set; }
         public bool Active { get; set; }
+
+        public virtual AdLocation Parent { get; set; }
     }
 
     public enum LocationType

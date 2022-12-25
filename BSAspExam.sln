@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSAspExam.API", "BSAspExam.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSAspExam.Models", "BSAspExam.Models\BSAspExam.Models.csproj", "{DB7DC973-5EE6-49B9-8496-64B33A2C491E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSAspExam.Repo", "BSAspExam.Repo\BSAspExam.Repo.csproj", "{367ECA81-74FD-42E2-8C22-D57C95B8576D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSAspExam.Repositories", "BSAspExam.Repo\BSAspExam.Repositories.csproj", "{367ECA81-74FD-42E2-8C22-D57C95B8576D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSAspExam.Services", "BsAspExam.Services\BSAspExam.Services.csproj", "{63613CB7-A36A-442C-B1AA-9F3FA5965558}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{367ECA81-74FD-42E2-8C22-D57C95B8576D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367ECA81-74FD-42E2-8C22-D57C95B8576D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367ECA81-74FD-42E2-8C22-D57C95B8576D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63613CB7-A36A-442C-B1AA-9F3FA5965558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63613CB7-A36A-442C-B1AA-9F3FA5965558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63613CB7-A36A-442C-B1AA-9F3FA5965558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63613CB7-A36A-442C-B1AA-9F3FA5965558}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
