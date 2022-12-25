@@ -31,8 +31,21 @@ namespace BSAspExam.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Advertisement advertisement)
+        public async Task<IActionResult> Post([FromBody] AdvertisementRequest model)
         {
+
+            var advertisement = new Advertisement
+            {
+                Images = model.Images,
+                Price = model.Price,
+                Status = AdStatus.UnPublished,
+                Active = true,
+                CreatedBy = CurrentUserId,
+                Description = model.Description,
+                LocationId = model.LocationId,
+                Product = model.Product,
+                Slug = model.Slug
+            };
 
             await _service.AddAdvertisement(advertisement);
 

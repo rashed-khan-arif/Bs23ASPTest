@@ -19,7 +19,7 @@ namespace BSAspExam.Services.Impl
 
         public async Task<bool> AddAdvertisement(Advertisement ad)
         {
-            _unitOfWork.AdvertisementRepository.Add(ad);
+           await _unitOfWork.AdvertisementRepository.AddAsync(ad);
 
             var res = await _unitOfWork.CommitAsync();
 
