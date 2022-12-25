@@ -9,10 +9,10 @@ using System.Reflection;
 using System.Reflection.Emit;
 
 namespace BSAspExam.Repo.Core
-{
-    public class AppDBContext : IdentityDbContext<ApplicationUser>
+{ 
+    public class AppDBContext : IdentityDbContext<ApplicationUser, Role, int, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
     {
-        public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
+        public AppDBContext(DbContextOptions options) : base(options)
         {
 
         }

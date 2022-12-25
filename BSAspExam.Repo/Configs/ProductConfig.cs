@@ -22,7 +22,7 @@ namespace BSAspExam.Repo.Configs
             builder.Property(x => x.CreateDate).HasDefaultValueSql("getdate()");
 
             builder.HasOne(a => a.Advertisement).WithOne(a => a.Product).HasForeignKey<Advertisement>(a => a.ProductId);
-            builder.HasOne(a => a.Brand).WithMany(a => a.Products).HasForeignKey(a => a.Brand);
+            builder.HasOne(a => a.Brand).WithMany(a => a.Products).HasForeignKey(a => a.BrandId);
             builder.HasOne(a => a.Category).WithMany(a => a.Products).HasForeignKey(a => a.CategoryId);
 
             builder.ToTable("Products", "Prod");

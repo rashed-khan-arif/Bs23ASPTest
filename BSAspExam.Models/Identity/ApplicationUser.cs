@@ -10,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace BSAspExam.Models.Identity
 {
-    public class ApplicationUser : IdentityUser
-    {
-
+    public class ApplicationUser : IdentityUser<int>
+    { 
         public virtual ICollection<UserBlacklist> UserBlacklists { get; set; } 
         public virtual ICollection<Advertisement> Advertisements { get; set; }
         public virtual ICollection<AdLocation> Locations { get; set; }

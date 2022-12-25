@@ -39,7 +39,7 @@ namespace BSAspExam.API.Core
         }
         public static IServiceCollection AddAppIdentity(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            services.AddIdentity<ApplicationUser, Role>(options =>
             {
                 options.User.RequireUniqueEmail = true;
                 options.Password.RequireDigit = false;

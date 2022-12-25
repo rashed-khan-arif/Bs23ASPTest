@@ -1,4 +1,5 @@
 ﻿using BSAspExam.Models.Common;
+using BSAspExam.Models.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -18,7 +19,7 @@ namespace BSAspExam.API.Core
             _configuration = configuration;
         }
 
-        public AuthenticationResponse CreateToken(IdentityUser user, IList<string>? roles)
+        public AuthenticationResponse CreateToken(ApplicationUser user, IList<string>? roles)
         {
             var expiration = DateTime.UtcNow.AddMinutes(EXPIRATION_MINUTES);
 
@@ -46,13 +47,13 @@ namespace BSAspExam.API.Core
                 signingCredentials: credentials
             );
 
-        private Claim[] CreateClaims(IdentityUser user, IList<string>? roles)
+        private Claim[] CreateClaims(ApplicationUser user, IList<string>? roles)
         {
             var userRoles = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.UserName),
                 new Claim(ClaimTypes.Email, user.Email)
             };

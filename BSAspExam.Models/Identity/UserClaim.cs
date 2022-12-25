@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace BSAspExam.Models.Identity
 {
-    public static class UserRoles
+    public class UserClaim : IdentityUserClaim<int>
     {
-        public const string Admin = "Admin";
-        public const string User = "User"; 
+        public UserClaim()
+        {
+
+        }
     }
 }
