@@ -15,5 +15,6 @@ namespace BSAspExam.Models.Identity
         public virtual ICollection<UserBlacklist> UserBlacklists { get; set; } 
         public virtual ICollection<Advertisement> Advertisements { get; set; }
         public virtual ICollection<AdLocation> Locations { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
     }
 }

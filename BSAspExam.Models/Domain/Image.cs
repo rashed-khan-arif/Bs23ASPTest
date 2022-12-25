@@ -1,4 +1,5 @@
 ﻿using BSAspExam.Models.Common;
+using BSAspExam.Models.Identity;
 
 namespace BSAspExam.Models.Domain
 {
@@ -12,6 +13,7 @@ namespace BSAspExam.Models.Domain
         public DateTime UpdateDate { get; set; }
         public bool Active { get; set; }
 
+        public virtual ApplicationUser CreatedByUser { get; set; }
         public virtual ICollection<AdImage> AdImages { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
     }

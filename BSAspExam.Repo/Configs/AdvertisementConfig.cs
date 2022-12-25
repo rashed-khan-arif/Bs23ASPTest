@@ -1,4 +1,5 @@
 ﻿using BSAspExam.Models.Domain;
+using BSAspExam.Repositories.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -18,12 +19,9 @@ namespace BSAspExam.Repo.Configs
             builder.Property(x => x.CreatedBy);
             builder.Property(x => x.Verified);
             builder.Property(x => x.Slug);
+            builder.Property(x => x.UpdateDate).CreateDate();
 
-            builder.Property(x => x.UpdateDate)
-                .HasDefaultValueSql("GetDate()");
-
-            builder.Property(x => x.CreateDate)
-                .HasDefaultValueSql("GetDate()");
+            builder.Property(x => x.CreateDate).CreateDate();
 
             builder.HasOne(a => a.AdContactInfo).WithOne(a => a.Advertisement).HasForeignKey<AdContactInfo>(a => a.AdvertisementId);
             builder.HasOne(a => a.Location).WithMany(a => a.Advertisements).HasForeignKey(a => a.LocationId);
