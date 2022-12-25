@@ -17,11 +17,13 @@ namespace BSAspExam.Services.Impl
         }
 
 
-        public async Task AddAdvertisement(Advertisement ad)
+        public async Task<bool> AddAdvertisement(Advertisement ad)
         {
             _unitOfWork.AdvertisementRepository.Add(ad);
 
-            await _unitOfWork.CommitAsync();
+            var res = await _unitOfWork.CommitAsync();
+
+            return res > 0;
         }
 
         public async Task<Advertisement> Get(int id)

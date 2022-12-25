@@ -30,7 +30,7 @@ namespace BSAspExam.Repo.UOW
             => _dbContext.SaveChanges();
 
 
-        public async Task CommitAsync()
+        public async Task<int> CommitAsync()
             => await _dbContext.SaveChangesAsync();
 
 

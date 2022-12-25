@@ -13,7 +13,7 @@ namespace BSAspExam.Repo.UOW
         IAdvertisementRepository AdvertisementRepository { get; }
         void Commit();
         void Rollback();
-        Task CommitAsync();
+        Task<int> CommitAsync();
         Task RollbackAsync();
     }
 }

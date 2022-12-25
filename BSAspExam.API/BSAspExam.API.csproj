@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BSAspExam.Models\BSAspExam.Models.csproj" />
     <ProjectReference Include="..\BSAspExam.Repo\BSAspExam.Repositories.csproj" />
+    <ProjectReference Include="..\BsAspExam.Services\BSAspExam.Services.csproj" />
   </ItemGroup>
 
 </Project>

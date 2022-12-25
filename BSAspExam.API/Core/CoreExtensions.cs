@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using System.Configuration;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 namespace BSAspExam.API.Core
@@ -74,6 +76,12 @@ namespace BSAspExam.API.Core
                 };
             });
             return services;
+        }
+        public static int GetUserId(this ClaimsPrincipal user)
+        {
+            return user.HasClaim(a => a.Type == JwtRegisteredClaimNames.Jti)
+                ? int.Parse(user.FindFirst(a => a.Type == JwtRegisteredClaimNames.Jti).Value)
+                : -2;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace BSAspExam.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class AuthController : BaseController
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly JWTService jwtService;

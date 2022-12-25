@@ -11,6 +11,6 @@ namespace BSAspExam.Services
     {
         public Task<Advertisement> Get(int id);
         public Task<IEnumerable<Advertisement>> GetAll();
-        public Task AddAdvertisement(Advertisement ad);
+        public Task<bool> AddAdvertisement(Advertisement ad);
     }
 }
