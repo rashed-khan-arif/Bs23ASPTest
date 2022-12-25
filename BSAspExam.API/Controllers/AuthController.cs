@@ -1,9 +1,9 @@
 ﻿using BSAspExam.API.Core;
 using BSAspExam.Models.Common;
-using BSAspExam.Models.Identity; 
+using BSAspExam.Models.Identity;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc; 
-using System.IdentityModel.Tokens.Jwt; 
+using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace BSAspExam.API.Controllers
 {
@@ -11,10 +11,10 @@ namespace BSAspExam.API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<ApplicationUser> userManager; 
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly JWTService jwtService;
 
-        public AuthController(UserManager<ApplicationUser> userManager,            
+        public AuthController(UserManager<ApplicationUser> userManager,
             JWTService jwtService)
         {
             this.userManager = userManager;
@@ -28,13 +28,13 @@ namespace BSAspExam.API.Controllers
             var user = await userManager.FindByNameAsync(model.Username);
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
             {
-                var userRoles = await userManager.GetRolesAsync(user); 
+                var userRoles = await userManager.GetRolesAsync(user);
 
                 var tokenRes = jwtService.CreateToken(user, userRoles);
 
                 return Ok(new
                 {
-                    token = new JwtSecurityTokenHandler().WriteToken(tokenRes.Token),
+                    token = tokenRes.Token,
                     expiration = tokenRes.Expiration
                 });
             }

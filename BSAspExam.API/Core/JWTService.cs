@@ -18,7 +18,7 @@ namespace BSAspExam.API.Core
             _configuration = configuration;
         }
 
-        public AuthenticationResponse CreateToken(IdentityUser user,IList<string>? roles)
+        public AuthenticationResponse CreateToken(IdentityUser user, IList<string>? roles)
         {
             var expiration = DateTime.UtcNow.AddMinutes(EXPIRATION_MINUTES);
 
@@ -28,11 +28,11 @@ namespace BSAspExam.API.Core
                 expiration
             );
 
-            //var tokenHandler = new JwtSecurityTokenHandler();
+            var tokenHandler = new JwtSecurityTokenHandler();
 
             return new AuthenticationResponse
             {
-                Token = token,//tokenHandler.WriteToken(token),
+                Token = tokenHandler.WriteToken(token),
                 Expiration = expiration
             };
         }

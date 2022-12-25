@@ -43,6 +43,11 @@ namespace BSAspExam.API.Core
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.User.RequireUniqueEmail = true;
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
                 options.Lockout.MaxFailedAccessAttempts = 10;
             })
               .AddEntityFrameworkStores<AppDBContext>()

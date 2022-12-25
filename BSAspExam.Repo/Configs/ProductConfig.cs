@@ -1,17 +1,17 @@
-﻿using BSAspExam.Models.Inventory;
+﻿using BSAspExam.Models.Domain;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders; 
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BSAspExam.Repo.Configs
 {
-    public class ProductConfig : IEntityTypeConfiguration<Product>
+    public class AdvertisementConfig : IEntityTypeConfiguration<Advertisement>
     {
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<Advertisement> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name);
+            builder.Property(x => x.Title);
             builder.Property(x => x.Description);
-            builder.ToTable("Products", "Inv");
+            builder.ToTable("Advertisements", "Ad");
         }
     }
 }

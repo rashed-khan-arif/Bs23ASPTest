@@ -9,7 +9,7 @@ namespace BSAspExam.Models.Common
 {
     public class AuthenticationResponse
     {
-        public JwtSecurityToken? Token { get; set; }
+        public string? Token { get; set; }
         public DateTime Expiration { get; set; }
     }
 }
