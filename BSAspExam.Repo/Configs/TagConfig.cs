@@ -11,7 +11,13 @@ namespace BSAspExam.Repo.Configs
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Active);
             builder.Property(x => x.Name);
-            builder.Property(x => x.CreateDate).HasDefaultValueSql("getdate()");
+
+            builder.Property(x => x.UpdateDate)
+                .HasDefaultValueSql("GetDate()");
+
+            builder.Property(x => x.CreateDate)
+                .HasDefaultValueSql("GetDate()");
+
             builder.ToTable("Tags", "Ad");
         }
     }

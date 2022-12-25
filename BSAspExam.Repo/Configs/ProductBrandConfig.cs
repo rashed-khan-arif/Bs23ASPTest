@@ -12,6 +12,8 @@ namespace BSAspExam.Repo.Configs
             builder.Property(x => x.Name); 
             builder.Property(x => x.Description); 
             builder.Property(x => x.Active);  
+
+
             builder.ToTable("ProductBrands", "Prod");
         }
     }

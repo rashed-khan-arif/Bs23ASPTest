@@ -18,8 +18,13 @@ namespace BSAspExam.Repo.Configs
             builder.Property(x => x.CategoryId);
             builder.Property(x => x.BrandId);
             builder.Property(x => x.Description);
-            builder.Property(x => x.Active); 
-            builder.Property(x => x.CreateDate).HasDefaultValueSql("getdate()");
+            builder.Property(x => x.Active);
+
+            builder.Property(x => x.UpdateDate)
+                .HasDefaultValueSql("GetDate()");
+
+            builder.Property(x => x.CreateDate)
+                .HasDefaultValueSql("GetDate()");
 
             builder.HasOne(a => a.Advertisement).WithOne(a => a.Product).HasForeignKey<Advertisement>(a => a.ProductId);
             builder.HasOne(a => a.Brand).WithMany(a => a.Products).HasForeignKey(a => a.BrandId);

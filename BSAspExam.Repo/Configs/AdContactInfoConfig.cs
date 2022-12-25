@@ -12,7 +12,7 @@ namespace BSAspExam.Repo.Configs
             builder.Property(x => x.AdvertisementId);
             builder.Property(x => x.PhoneNumber);
             builder.Property(x => x.Name);
-            builder.Property(x => x.Email); 
+            builder.Property(x => x.Email);  
 
             builder.ToTable("AdContactInfos", "Ad");
         }

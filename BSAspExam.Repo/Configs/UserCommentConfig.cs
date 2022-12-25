@@ -19,6 +19,11 @@ namespace BSAspExam.Repositories.Configs
             builder.Property(x => x.Comments);
             builder.Property(x => x.ParentId).IsRequired(false);
 
+            builder.Property(x => x.UpdateDate)
+                .HasDefaultValueSql("GetDate()");
+
+            builder.Property(x => x.CreateDate)
+                .HasDefaultValueSql("GetDate()");
 
             builder.HasOne(a => a.Parent).WithMany(a => a.Childs).HasForeignKey(a => a.ParentId);
 

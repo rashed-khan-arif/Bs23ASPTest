@@ -13,6 +13,12 @@ namespace BSAspExam.Repositories.Configs
             builder.Property(x => x.AdvertisementId);
             builder.Property(x => x.Message);
 
+            builder.Property(x => x.UpdateDate)
+                .HasDefaultValueSql("GetDate()");
+
+            builder.Property(x => x.CreateDate)
+                .HasDefaultValueSql("GetDate()");
+
             builder.HasOne(a => a.Advertisement).WithMany(a => a.Messages).HasForeignKey(a => a.AdvertisementId);
 
             builder.ToTable("AdMessages", "User");

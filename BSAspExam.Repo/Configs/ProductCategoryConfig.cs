@@ -11,7 +11,9 @@ namespace BSAspExam.Repo.Configs
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Name); 
             builder.Property(x => x.Description); 
-            builder.Property(x => x.Active);  
+            builder.Property(x => x.Active); 
+            
+
             builder.ToTable("ProductCategories", "Prod");
         }
     }

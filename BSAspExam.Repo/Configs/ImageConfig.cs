@@ -17,7 +17,13 @@ namespace BSAspExam.Repo.Configs
             builder.Property(x => x.Title);
             builder.Property(x => x.Url); 
             builder.Property(x => x.Active);
-            builder.Property(x => x.CreateDate).HasDefaultValueSql("getdate()");
+
+            builder.Property(x => x.UpdateDate)
+                .HasDefaultValueSql("GetDate()");
+
+            builder.Property(x => x.CreateDate)
+                .HasDefaultValueSql("GetDate()");
+
             builder.ToTable("Images", "dbo");
         }
     }
