@@ -1,4 +1,5 @@
 ﻿using BSAspExam.Models.Common;
+using BSAspExam.Models.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace BSAspExam.Models.Domain
         public int CreatedBy { get; set; }
         public DateTime UpdateDate { get; set; }
 
+        public virtual ApplicationUser CreatedByUser { get; set; }
         public virtual Product Product { get; set; }
         public virtual AdLocation Location { get; set; }
         public ICollection<AdImage> Images { get; set; }
@@ -68,7 +70,7 @@ namespace BSAspExam.Models.Domain
         public virtual Product Product { get; set; }
     }
 
-    public class AdImage : IEntity
+    public class Image : IEntity
     {
         public int Id { get; set; }
         public string Url { get; set; }
@@ -78,6 +80,15 @@ namespace BSAspExam.Models.Domain
         public DateTime UpdateDate { get; set; }
         public bool Active { get; set; }
     }
+
+    public class AdImage
+    {
+        public int Id { get; set; }
+        public int AdvertisementId { get; set; }
+        public int ImageId { get; set; }
+        public bool Active { get; set; }
+    }
+   
 
     public class AdContactInfo
     {

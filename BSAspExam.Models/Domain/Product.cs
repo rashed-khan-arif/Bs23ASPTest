@@ -21,7 +21,19 @@ namespace BSAspExam.Models.Domain
 
         public virtual ProductBrand Brand { get; set; }
         public virtual ProductCategory Category { get; set; }
+        public virtual ICollection<ProductImage> ProductImages { get; set; }
 
+    }
+    public class ProductImage
+    {
+        public int Id { get; set; }
+        public int ProductId { get; set; }
+        public int ImageId { get; set; }
+        public bool Active { get; set; }
+
+
+        public virtual Product Product { get; set; }
+        public virtual Image Image { get; set; }
     }
 
     public class ProductCategory
